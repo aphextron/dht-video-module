@@ -1,5 +1,5 @@
-<script type="text/ng-template" id="videoPlayer.html">
-     <div class="modal-body">   
+<div id="videoPlayer.html">
+     <div class="videoModal-body">   
 			<div class="videoModal-left span3 pull-left">
 				<div class="videoModal-social">
 					<div class="videoModal-twitter">
@@ -21,7 +21,7 @@
 				<div class="videoModal-tourInfo">
 					<div class="videoModal-slideshow" ng-repeat="slide in tourObj.slides">
 					<ul class="videoModal-slides">
-					<li ng-bind-html="slide.slideimage">
+					<li ng-bind-html="tourObj.slide.slide_image">
 					{{slide.slide_image}}
 					</li>
 					</ul>
@@ -43,5 +43,5 @@
 			<p> lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet </p>
 			</div>
         </div>
-    </script>
+    </div>
 

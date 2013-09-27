@@ -1,28 +1,40 @@
 
-var videoPlayer = angular.module('videoPlayer',[],function($routeProvider) {        
-    
-  $routeProvider.when('/videoPlayer',{templateUrl:'videoPlayer.html',controller:'videoCtrl'})
- .otherwise({redirectTo:'/insert_default_route'});
-    
-});
+var videoPlayer = angular.module('videoPlayer', ['ui.bootstrap']);
+
+function modalCtrl($scope, $modal, $log){
+
+
+    $scope.open = function (pid) {
+    var modalInstance = $modal.open({
+      templateUrl: 'videoPlayer.html',
+      controller: videoCtrl,     
+    });
+    window.CurrentActivityID = pid;
+    }
+}
+
 
 
 function videoCtrl($scope, $http) {
-    $scope.url = "https://s3.amazonaws.com/mirror.discoverhawaiitours.com/activity_object_json/11204.json";
+    var pid = $scope.CurrentActivityID;
     $scope.tourObj = [];
 
     $scope.insertInfo = function(data, status){
-    $scope.tourObj = data;
+      $scope.tourObj = data;
     }
 
- 	$scope.fetchInfo = function() {
-       $http.get($scope.url).success($scope.insertInfo)
-       }
+ 	  $scope.fetchInfo = function() {
+      var pid = window.CurrentActivityID; 
+      $scope.url = "https://s3.amazonaws.com/mirror.discoverhawaiitours.com/activity_object_json/"+ pid +".json";
+      $http.get($scope.url).success($scope.insertInfo)
+   
+    }
     
 
-       $scope.fetchInfo();
 
-    }
+
+       $scope.fetchInfo();
+}
 
 
 
