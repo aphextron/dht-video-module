@@ -1,0 +1,3 @@
+[submodule "wp-content/uploads"]
+	path = wp-content/uploads
+	url = http://ben@stash.discoverhawaiitours.com:7990/scm/dht/dht-wordpress-uploads.git

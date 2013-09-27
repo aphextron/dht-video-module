@@ -1,0 +1,47 @@
+<script type="text/ng-template" id="videoPlayer.html">
+     <div class="modal-body">   
+			<div class="videoModal-left span3 pull-left">
+				<div class="videoModal-social">
+					<div class="videoModal-twitter">
+					</div>
+					<div class="videoModal-facebook">
+					</div>
+					<div class="videoModal-googleplus">
+					</div>
+				</div>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li id="videoModal-cancellation">cancellation: {{  tourObj.cancellation_policy }} </li>
+					</ul>	
+			</div>
+			<div class="videoModal-center span6">
+				<div class="videoModal-tourInfo">
+					<div class="videoModal-slideshow" ng-repeat="slide in tourObj.slides">
+					<ul class="videoModal-slides">
+					<li ng-bind-html="slide.slideimage">
+					{{slide.slide_image}}
+					</li>
+					</ul>
+					</div>
+					<div class="videoModal-tourDetails">
+					    	<h3 id="videoModal-tourName">{{ tourObj.title }}</h3>
+					    	<div class="avgrtscnt">
+					    		<span class="rts starrate">
+					    			<img src="stars">
+					    		</span> 
+					    		<span id="videoModal-reviews">{{tourObj.average_rating}}/5 Stars</span>
+					    	</div>			   
+					    	<div id="videoModal-description"> {{ tourObj.short_description }}</div>
+							<div id="videoModal-price" class="pricedisplay">price: {{ tourObj.price }}</div>
+					</div>
+				</div>
+			</div>
+			<div class="videoModal-right span3 pull-right">
+			<p> lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet lorum ipsum dolor set amet </p>
+			</div>
+        </div>
+    </script>
+

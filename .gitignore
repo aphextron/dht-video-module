@@ -1,0 +1,6 @@
+.htaccess
+wp-config.php
+wp-content/uploads/*
+wp-content/plugins/widgetkit/cache/*
+wp-content/themes/theme_master/styles/dhtdefault/images/pspbrwse.jbf
+/wp-content/themes/theme_master/layouts/temp-widget.php
